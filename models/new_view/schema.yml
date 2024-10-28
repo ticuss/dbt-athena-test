@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: iris_summary
+    description: "A summary view of the iris dataset with aggregate statistics by species."
+    access: "public" # Options are 'private', 'protected', 'public'
+
+    columns:
+      - name: species
+        description: "The species of the iris."
+        data-tests:
+          - not_null
+          - unique
+
+      - name: avg_sepal_length
+        description: "Average sepal length by species."
+        data-tests:
+          - numeric
+
+      - name: min_sepal_length
+        description: "Minimum sepal length by species."
+        data-tests:
+          - numeric
+
+      - name: max_sepal_length
+        description: "Maximum sepal length by species."
+        data-tests:
+          - numeric
+
+      - name: count_sepal_length
+        description: "Count of sepal length measurements by species."
+        data-tests:
+          - not_null
+          - numeric
+
+      - name: stddev_sepal_length
+        description: "Standard deviation of sepal length by species."
+        data-tests:
+          - numeric
+
+    versions:
+      - v: 1
+        config:
+          materialized: view # Example config for versioning

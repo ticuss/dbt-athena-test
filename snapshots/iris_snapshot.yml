@@ -1,0 +1,20 @@
+snapshots:
+  - name: iris_snapshot
+    relation: ref('iris') # or use source('my_source', 'my_table') if it's a source
+    config:
+      database: snapshots # Replace with your actual database name
+      schema: snapshots # The schema where the snapshot will be stored
+      alias: iris_snapshot_alias # Alias for the snapshot table
+      strategy: timestamp # Choose between 'timestamp' or 'check'
+      unique_key: id # Column that uniquely identifies each row
+      check_cols: # Columns to check for changes
+        - sepal_length
+        - sepal_width
+        - petal_length
+        - petal_width
+        - species
+      updated_at: last_updated # Column that indicates the last update time
+      invalidate_hard_deletes: false # Set to true if you want to invalidate hard deletes
+      snapshot_meta_column_names: # Optional metadata for the snapshot
+        created_at: created_at
+        updated_at: updated_at
