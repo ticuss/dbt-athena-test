@@ -3,3 +3,17 @@ macros:
     description: |
       This macro generates SQL to calculate basic statistics (average, min, max, count) for a given column.
       It accepts a single argument: the column name.
+    arguments:
+      - name: column_name
+        type: string
+        description: |
+          The name of the column for which the statistical measures (AVG, MIN, MAX, COUNT) are calculated.
+
+  - name: iris_extended_statistics
+    description: |
+      This macro calculates extended statistical measures (standard deviation, variance) for a given column.
+    arguments:
+      - name: column_name
+        type: string
+        description: |
+          The name of the column for which extended statistics are calculated.
