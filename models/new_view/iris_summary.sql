@@ -7,9 +7,5 @@ select
     {{ iris_statistics("petal_width") }},
     target
 
-
-
-
-
 from {{ ref("iris") }}
 group by target
