@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: iris_summary
+    description: "A summary view of the iris dataset with aggregate statistics by species."
+    access: "public"  # Options are 'private', 'protected', 'public'
+
+    columns:
+      - name: target
+        description: "The species of the iris."
+        tests:
+          - not_null
+          - unique
+
+      - name: avg_sepal_length
+        description: "Average sepal length by species."
+        tests:
+          - not_null
+
+      - name: min_sepal_length
+        description: "Minimum sepal length by species."
+        tests:
+          - not_null
+
+      - name: max_sepal_length
+        description: "Maximum sepal length by species."
+        tests:
+          - not_null
+
+      - name: avg_sepal_width
+        description: "Average sepal width by species."
+        tests:
+          - not_null
+
+      - name: min_sepal_width
+        description: "Minimum sepal width by species."
+        tests:
+          - not_null
+
+      - name: max_sepal_width
+        description: "Maximum sepal width by species."
+        tests:
+          - not_null
+
+      - name: avg_petal_length
+        description: "Average petal length by species."
+        tests:
+          - not_null
+
+      - name: min_petal_length
+        description: "Minimum petal length by species."
+        tests:
+          - not_null
+
+      - name: max_petal_length
+        description: "Maximum petal length by species."
+        tests:
+          - not_null
+
+      - name: avg_petal_width
+        description: "Average petal width by species."
+        tests:
+          - not_null
+
+      - name: min_petal_width
+        description: "Minimum petal width by species."
+        tests:
+          - not_null
+
+      - name: max_petal_width
+        description: "Maximum petal width by species."
+        tests:
+          - not_null
+    versions:
+      - v: 1
+        config:
+          materialized: view # Example config for versioning
