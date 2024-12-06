@@ -1,0 +1,5 @@
+macros:
+  - name: iris_statistics
+    description: |
+      This macro generates SQL to calculate basic statistics (average, min, max, count) for a given column.
+      It accepts a single argument: the column name.
