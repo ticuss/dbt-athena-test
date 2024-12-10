@@ -1,4 +1,3 @@
-
 [sqlfluff]
 templater = dbt
 # This change (from jinja to dbt templater) will make linting slower

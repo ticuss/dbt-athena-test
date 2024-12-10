@@ -3,7 +3,7 @@ version: 2
 models:
   - name: iris_summary
     description: "A summary view of the iris dataset with aggregate statistics by species."
-    access: "public"  # Options are 'private', 'protected', 'public'
+    access: "public" # Options are 'private', 'protected', 'public'
 
     columns:
       - name: target
@@ -71,7 +71,8 @@ models:
         description: "Maximum petal width by species."
         tests:
           - not_null
+
     versions:
       - v: 1
         config:
-          materialized: view # Example config for versioning
+          materialized: view
