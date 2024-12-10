@@ -7,7 +7,7 @@ with summary as (
     select
         *,
         REGEXP_EXTRACT(target, '[^-]+$') AS species
-    from {{ ref('iris_with_unique_ids') }}  -- Ensure this model is correctly referenced
+    from {{ ref('iris_with_unique_ids') }} 
 )
 
 select *
