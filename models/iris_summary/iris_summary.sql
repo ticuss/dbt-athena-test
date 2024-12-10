@@ -1,5 +1,3 @@
-{{ config(materialized="view") }}
-
 select
     {{ iris_statistics("sepal_length") }},
     {{ iris_statistics("sepal_width") }},

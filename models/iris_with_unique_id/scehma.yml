@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: iris_with_unique_ids
+    description: "Iris dataset with unique ids"
+    access: "public" # Options are 'private', 'protected', 'public'
+
+    columns:
+      - name: unique_id
+        description: "The species of the iris."
+        tests:
+          - not_null
+          - unique
